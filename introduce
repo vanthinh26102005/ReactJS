@@ -1,0 +1,21 @@
+#SPA - Single Page Application
+- ReactJS là 1 trong những thư viện tạo ra SPA
+- Các công ty sử dụng SPA: Google, Facebook, Twiter
+
+#Cách triển khai
+- SPA - Single-Page Application
+- MPA - Multi-Page Application
+
+# Sự khác biệt
+
+# SPA
+- Được cho là cách tiếp cận hiện tại hơn
+- Không yêu cầu tải lại trang trong quá trình sử dụng
+
+# MPA
+- là cách tiếp cận cổ điển hơn
+- Tải lại trang trong quá trình sử dụng (Click vào link, chuyển trang)
+
+# Demo
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+
+    <!-- 
+     JSX ->  javascript XML
+     JSX is not HTML
+     => we need js, babel to use JSX
+    -->
+
+    <div id="root"></div>
+    <!-- 
+    <ul>
+        <li>Javascript</li>
+        <li>c++</li>
+    </ul>
+     -->
+    <script type="text/babel">
+        const language = 'ReacJs VT'
+        const ul = <ul>
+            <li>Javascript</li>
+            <li>c++</li>
+        </ul>
+        ReactDOM.render(ul, document.getElementById('root'))
+    </script>
+</body>
+
+</html>
