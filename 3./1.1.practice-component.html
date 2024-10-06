@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- 
+    - React elements
+        + use props like attribute of html
+        + 2 props class, for => className, htmlFor
+        + 
+    - React components
+        + use props like arguments for component
+        - free to set name for props
+            - set name follow camelCase
+            - Can include '-'
+    - Note:
+        + Prop "key" is specially prob
+        + Props is basicly argument of component
+         => Props can be  any type of data 
+        + use destructuring
+     -->
+
+    <div id="root"></div>
+    <script type="text/babel">
+        function PostItem({
+            image,
+            title,
+            description,
+            publishedAt, 
+        }) {
+
+          //  console.log(props)
+            return (
+
+                <div className="posts-list">
+                    <label htmlFor="email" >Email </label>
+                    <input id="email" />
+                    <div className="post-item">
+                        <img src={image}
+                            alt={title} />
+                        <h2 className='post-title'>{title}</h2>
+                        <p className='post-desc'>{description}</p>
+                        <p className='post-published'>{publishedAt}</p>
+                    </div>
+                </div>
+            )
+        }
+        //app.js
+        function App() {
+
+            console.log(<PostItem title="Title test" />)
+
+            return (
+                <div id="wrapper">
+                    Hello world!!
+                    <PostItem
+                        title="1 C#(.NET) - Tương tác với file Excel"
+                        image="https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png"
+                        description="Ban co the thu"
+                        publishedAt="Mot ngay truoc"
+                    />
+
+                    <PostItem
+                        title="2 C#(.NET) - Tương tác với file Excel"
+                        image="https://files.fullstack.edu.vn/f8-prod/blog_posts/311/6147eea9cef9c.png"
+                        description="Ban co the thu"
+                        publishedAt="Mot ngay truoc"
+                    />
+
+
+                </div>
+            )
+        }
+
+        //index.js
+        ReactDOM.render(<App />, document.getElementById('root'));
+
+    </script>
+</body>

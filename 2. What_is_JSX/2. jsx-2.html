@@ -24,13 +24,26 @@
                 name: 'van thinh'
             }
         ]
-
+        // render array
         const jsx = (
+            <div>
             <ul>
                 {languages.map((language, index) =>
                    <li key={index}>{language.name}</li>
                 )}
             </ul>
+
+            <ul>
+                {languages.map((language, index) =>
+                   <li key={index}>{language.name}</li>
+                )}
+            </ul>
+            <ul>
+                {languages.map((language, index) =>
+                   <li key={index}>{language.name}</li>
+                )}
+            </ul>
+            </div>
         )
         const jsx1 = (
             <div>
