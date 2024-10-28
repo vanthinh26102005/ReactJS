@@ -1,0 +1,26 @@
+const BlogItem = ({blog}) => (
+    <div>
+        <h2>{blog.title}</h2>
+        <img src={blog.image} alt="" />
+        <p>{blog.description}</p>
+        <p>{blog.reactions_count}</p>
+    </div>
+
+)
+
+//app.js
+function App() {
+    return (
+        <div id="wrapper">
+            {
+                blogs.map(blog => (
+                    <BlogItem
+                        key = {blog.id}
+                        blog = {blog}
+                    />
+                ))
+            }   
+
+        </div>
+    )
+}

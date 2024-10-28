@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJs</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    
+    <!-- 
+    1/
+    - handle dom-event
+    - componet which is defined must UpperCase first letter
+    - choose component in 1 object
+    - boolean , null, undefine  => cant be rendered
+    - Combine to render as condition
+
+    
+     -->
+    <div id="root"></div>  
+
+    <script type ="text/babel">
+        function App() {
+            return (
+                <div id = "wrapper">
+
+                    <button 
+                        onClick = {(event) =>console.log(event.target)}
+                    > 
+                        CLICK  ME !!
+                    </button>
+
+                    <button 
+                        onDoubleClick = {() =>console.log(event.target)}
+                    > 
+                        DOUBLE  CLICK  ME !!
+                    </button>
+
+                    <button 
+                        onClick = {() =>console.log(Math.random())}
+                    > 
+                        CLICK  ME !!
+                    </button>
+
+                    <button 
+                        onDoubleClick = {() =>console.log(Math.random())}
+                    > 
+                        DOUBLE  CLICK  ME !!
+
+                    </button>
+                </div>
+            )
+        }
+
+    ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+
+   
+</body>

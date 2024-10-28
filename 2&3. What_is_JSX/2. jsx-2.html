@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReactJS</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin> </script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">    
+        const languages = [
+            {
+                name: 'javascript'
+            },
+            {
+                name: 'c++'
+            },
+            {
+                name: 'van thinh'
+            }
+        ]
+        // render array
+        const jsx = (
+            <div>
+            <ul>
+                {languages.map((language, index) =>
+                   <li key={index}>{language.name}</li>
+                )}
+            </ul>
+
+            <ul>
+                {languages.map((language, index) =>
+                   <li key={index}>{language.name}</li>
+                )}
+            </ul>
+
+            <ul>
+                {languages.map((language, index) =>
+                   <li key={index}>{language.name}</li>
+                )}
+            </ul>
+            </div>
+        )
+        const jsx1 = (
+            <div>
+                <h1>heading 1</h1>
+             <h2>heading 2</h2>
+            </div>
+            
+        )
+        const jsx2 = (
+            <React.Fragment>
+                <h1>heading 1</h1>
+                <h2>heading 2</h2>
+            </React.Fragment>
+
+        )
+        console.log(jsx);
+
+        ReactDOM.render(jsx, document.getElementById('root'))
+        ReactDOM.render(jsx1, document.getElementById('root'))
+        ReactDOM.render(jsx2, document.getElementById('root'))
+
+
+    </script>
+</body>
+
+</html>
